@@ -5,7 +5,7 @@ on: [push]
 env:
   ENV_VARIABLE: ok
   VAR1 : job2
-  VAR2: job3
+  VAR2: ${{ github.event.repository.name }} 
   HOMEDIR: /home
  
 jobs:
