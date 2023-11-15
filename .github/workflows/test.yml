@@ -4,9 +4,21 @@ on: [push]
 
 env:
   ENV_VARIABLE: ok
+  VAR1 : job2
+  VAR2: job3
  
 jobs:
-    test:
+    job1:
       runs-on: ubuntu-latest
       steps:
         - run: echo "$ENV_VARIABLE"
+
+    job2:
+      runs-on: ubuntu-latest
+      steps:
+        - run: echo "$VAR1"
+    
+    job3:
+      runs-on: ubuntu-latest
+      steps:
+        - run: echo "$VAR2"
