@@ -19,8 +19,10 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - run: echo "$VAR1"
+        - run: ls -ltr "$HOMEDIR"
     
     job3:
       runs-on: ubuntu-latest
       steps:
         - run: echo "$VAR2"
+        - run: ls -ltr "$HOMEDIR"
