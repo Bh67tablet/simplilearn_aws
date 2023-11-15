@@ -1,6 +1,7 @@
 name: Github Actions test
 
-on: [push]
+on: 
+  workflow_dispatch:
 
 env:
   ENV_VARIABLE: ok
