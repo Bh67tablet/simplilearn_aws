@@ -6,12 +6,14 @@ env:
   ENV_VARIABLE: ok
   VAR1 : job2
   VAR2: job3
+  HOMEDIR: /home
  
 jobs:
     job1:
       runs-on: ubuntu-latest
       steps:
         - run: echo "$ENV_VARIABLE"
+        - run: ls -ltr "$HOMEDIR"
 
     job2:
       runs-on: ubuntu-latest
